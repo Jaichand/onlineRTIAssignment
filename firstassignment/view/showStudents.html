@@ -1,0 +1,25 @@
+<ul>
+  <li><h2>Student Detail</h2></li>
+  <li><a href="/#/home/addStudent">add Student</a></li>
+</ul>
+   <div class="well" ng-show='!studentCtrl.students.length' ><p class="col-sm-5" >Please Click this <a href="/#/home/addStudent">add Student</a> to add Student </p></div>
+<table ng-show="studentCtrl.students.length" border = 1px class="col-sm-5 table">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Email</th>
+    <th>Stream</th>
+    <th>Institute</th>
+    <th>CPI</th>
+    <th>Delete</th>
+  </tr>
+  <tr ng-repeat='student in studentCtrl.students'>
+    <td>{{ student.name }}</td>
+    <td>{{ student.age }}</td>
+    <td>{{ student.email }}</td>
+    <td>{{ student.stream }}</td>
+    <td>{{ student.colgname }}</td>
+    <td>{{ student.cpi }}</td>
+    <td><span style="cursor:pointer; color:blue" ng-click="studentCtrl.deleteStudent(student._id)">Delete</span></td>
+  </tr>
+</table>

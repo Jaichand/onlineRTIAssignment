@@ -1,0 +1,20 @@
+<div class="col-sm-12">
+  <h2>Please fill the following to proceed</h2>
+  <div style="float:right;"><a href="/#/home">Show Student</a></div> 
+    <form name="studentDetail" method="post" ng-submit="studentCtrl.enterDetail()" class="col-sm-12">
+      Name:<br/>
+      <input type="text" name="name" ng-model="studentCtrl.studentData.name" placeholder="Enter your Name" required/><br/>
+      email:<br/>
+      <input type="email" name="email" ng-model="studentCtrl.studentData.email" placeholder="example@gmail.com" required/><br/>
+      age:<br/>
+      <input type="number" name="age" ng-model="studentCtrl.studentData.age" placeholder="18" required/><br/>
+      Institute Name:<br/>
+      <input type="text" name="instituteName" ng-model="studentCtrl.studentData.instituteName" placeholder="ex:IIIT Jabalpur" required/><br/>
+      Stream:<br/>
+      <input type="text" name="stream" ng-model="studentCtrl.studentData.stream" placeholder="Computer Science" required/><br/>
+      CPI:<br/>
+      <input type="number" name="cpi" min="1" max="10" step="0.01" ng-model="studentCtrl.studentData.cpi" placeholder="8.6" required/><br/><br/>
+      <input type="submit" value="Submit"/>
+    </form>
+    <p id="msg"></p>
+</div>
